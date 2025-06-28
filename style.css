@@ -1,0 +1,360 @@
+/* ======= RESET & FONTS ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  padding-bottom: 80px;
+}
+
+body.light-mode {
+  background: #f8f9fa;
+  color: #111;
+}
+
+/* ======= HEADER & NAVBAR ======= */
+header {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  font-size: 1.8em;
+  color: #00ffe5;
+  margin-bottom: 10px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00ffe5;
+}
+
+body.light-mode nav a {
+  color: #111;
+}
+
+body.light-mode nav a:hover {
+  color: #0077ff;
+}
+
+/* ======= DARK MODE TOGGLE BUTTON ======= */
+.dark-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #00ffe5;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 100;
+}
+
+body.light-mode .dark-toggle {
+  background: #333;
+  color: #fff;
+}
+
+/* ======= HERO SECTION (Beranda) ======= */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+  padding: 20px;
+  animation: fadeInLeft 1s ease;
+}
+
+.hero-text h2 {
+  font-size: 2.5em;
+  color: #00ffe5;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #00ffe5;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #00c8b9;
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+  animation: fadeInRight 1s ease;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* ======= ANIMASI MASUK ======= */
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+/* ======= SECTIONS & CONTENT ======= */
+.hero, .content {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+.content h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.content p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+/* ======= TABEL JADWAL ======= */
+table.jadwal-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 90%;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table.jadwal-table th, table.jadwal-table td {
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  text-align: left;
+}
+
+body.light-mode table.jadwal-table {
+  background: #fff;
+  color: #000;
+}
+
+/* ======= DOKTER SECTION (Lebih Rapi) ======= */
+.dokter-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.dokter-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  width: 240px;
+  text-align: center;
+  padding: 25px 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.dokter-card:hover {
+  transform: translateY(-6px);
+}
+
+.dokter-card img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #00ffe5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.dokter-card p {
+  font-size: 0.95em;
+  color: #eee;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.dokter-card p strong {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 4px;
+  color: #00ffe5;
+}
+
+body.light-mode .dokter-card {
+  background: #fff;
+  color: #111;
+}
+
+body.light-mode .dokter-card p {
+  color: #333;
+}
+
+body.light-mode .dokter-card p strong {
+  color: #0077ff;
+}
+
+/* ======= GALERI (Versi Rapi & Mewah) ======= */
+.galeri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.galeri-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeri-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.galeri-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.galeri-item:hover img {
+  transform: scale(1.05);
+}
+
+body.light-mode .galeri-item {
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* ======= KONTAK ======= */
+.kontak-list {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding: 0 10px;
+}
+
+.kontak-list li {
+  margin-bottom: 10px;
+}
+
+.maps iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+/* ======= FOOTER ======= */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.95em;
+}
+
+body.light-mode footer {
+  background: #ddd;
+  color: #111;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text h2 {
+    font-size: 2em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  .hero-btn {
+    font-size: 0.95em;
+    padding: 10px 20px;
+  }
+}
+
+
+
